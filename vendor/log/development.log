@@ -1,0 +1,2450 @@
+  [1m[36m (93.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (99.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20150608023132)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "password" varchar(255), "remember_token" varchar(255), "remember_token_expires_at" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150608023132"]]
+  [1m[35m (78.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (115.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (72.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20150608023132)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "password" varchar(255), "remember_token" varchar(255), "remember_token_expires_at" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150608023132"]]
+  [1m[35m (71.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateVideos (20150608025118)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "videos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "autonym" varchar(255), "filename" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150608025118"]]
+  [1m[36m (78.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 12:26:14 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (13.5ms)
+Completed 200 OK in 226ms (Views: 198.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 12:26:14 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (52.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (90.4ms)
+
+
+Started GET "/home/eli/Downloads/linglingmeng.mp4" for 127.0.0.1 at 2015-06-08 12:26:15 +0800
+
+ActionController::RoutingError (No route matches [GET] "/home/eli/Downloads/linglingmeng.mp4"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 12:31:01 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 12:31:01 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.4ms)
+
+
+Started GET "/home/eli/Downloads/linglingmeng.mp4" for 127.0.0.1 at 2015-06-08 12:31:02 +0800
+
+ActionController::RoutingError (No route matches [GET] "/home/eli/Downloads/linglingmeng.mp4"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 12:35:29 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.3ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 12:35:29 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 12:35:30 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 12:35:30 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 12:37:34 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.5ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 12:37:35 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 12:38:00 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.4ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 12:38:00 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 12:38:06 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.4ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 12:38:06 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (12.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 12:38:10 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.4ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 12:38:10 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (12.0ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 12:41:11 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 12:41:11 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (12.5ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 12:41:45 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 12:41:45 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (11.7ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 12:43:43 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 12:43:43 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 12:43:49 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 12:43:49 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.9ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 12:45:24 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 12:45:25 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (11.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 13:56:45 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.5ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 13:56:46 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.7ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 13:57:04 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 13:57:04 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (12.3ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 13:57:29 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 13:57:30 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (11.8ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 14:00:43 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 14:00:43 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (14.1ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 14:16:10 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.5ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 14:16:10 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 14:16:54 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.5ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 14:16:54 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (11.4ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 14:16:56 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 14:16:56 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.1ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 14:17:09 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 14:17:09 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (10.8ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 14:23:37 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 14:23:37 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 14:31:36 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.5ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 14:31:36 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (11.7ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 14:31:40 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 14:31:40 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (10.9ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 14:31:57 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 14:31:57 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (11.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 14:46:24 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.0ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 14:46:24 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (14.1ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 14:48:58 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 14:48:58 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 14:53:09 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.4ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 14:53:09 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 14:56:07 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.3ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 14:56:07 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.4ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 14:56:31 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 14:56:31 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (11.1ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 14:57:10 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 14:57:11 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (10.9ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 15:02:19 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 15:02:19 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 15:03:11 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 15:03:11 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (14.9ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 15:10:41 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 192.168.206.11 at 2015-06-08 15:10:41 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:18:35 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 15:18:35 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (11.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:20:28 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.3ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 15:20:28 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (15.5ms)
+
+
+Started GET "/home/eli/Downloads/dongfangshuimo.mp4" for 127.0.0.1 at 2015-06-08 15:20:28 +0800
+
+ActionController::RoutingError (No route matches [GET] "/home/eli/Downloads/dongfangshuimo.mp4"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (13.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:20:32 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 15:20:32 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (12.4ms)
+
+
+Started GET "/home/eli/Downloads/dongfangshuimo.mp4" for 127.0.0.1 at 2015-06-08 15:20:32 +0800
+
+ActionController::RoutingError (No route matches [GET] "/home/eli/Downloads/dongfangshuimo.mp4"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:20:33 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.0ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 15:20:33 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (12.3ms)
+
+
+Started GET "/home/eli/Downloads/dongfangshuimo.mp4" for 127.0.0.1 at 2015-06-08 15:20:33 +0800
+
+ActionController::RoutingError (No route matches [GET] "/home/eli/Downloads/dongfangshuimo.mp4"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (13.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:20:33 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 15:20:33 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (13.6ms)
+
+
+Started GET "/home/eli/Downloads/dongfangshuimo.mp4" for 127.0.0.1 at 2015-06-08 15:20:33 +0800
+
+ActionController::RoutingError (No route matches [GET] "/home/eli/Downloads/dongfangshuimo.mp4"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (14.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:20:42 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.4ms)
+Completed 200 OK in 11ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 15:20:42 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.5ms)
+
+
+Started GET "/home/eli/Downloads/dongfangshuimo.mp4" for 127.0.0.1 at 2015-06-08 15:20:42 +0800
+
+ActionController::RoutingError (No route matches [GET] "/home/eli/Downloads/dongfangshuimo.mp4"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:20:43 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 15:20:43 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.5ms)
+
+
+Started GET "/home/eli/Downloads/dongfangshuimo.mp4" for 127.0.0.1 at 2015-06-08 15:20:43 +0800
+
+ActionController::RoutingError (No route matches [GET] "/home/eli/Downloads/dongfangshuimo.mp4"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (14.3ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 15:20:46 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:20:57 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.0ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 15:20:57 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap-3.2.0-dist/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.9ms)
+
+
+Started GET "/home/eli/Downloads/dongfangshuimo.mp4" for 127.0.0.1 at 2015-06-08 15:20:57 +0800
+
+ActionController::RoutingError (No route matches [GET] "/home/eli/Downloads/dongfangshuimo.mp4"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:24:01 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.5ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bootstrap/css/bootstrap.theme.min.css" for 127.0.0.1 at 2015-06-08 15:24:01 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap/css/bootstrap.theme.min.css"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/eli/.rvm/rubies/ruby-1.9.3-p550/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:24:31 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:35:56 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:35:58 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 15:36:44 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:38:46 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.3ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 15:39:00 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:39:36 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.5ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:39:36 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:39:41 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.6ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:39:42 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.0ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:39:49 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.6ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 15:39:54 +0800
+Processing by VideoController#index as HTML
+  Rendered video/index.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (34.1ms)[0m  INSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 07:58:50.705260"], ["name", "asd-wqe.mp4"], ["updated_at", "2015-06-08 07:58:50.705260"]]
+  [1m[36m (93.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 07:59:18.282367"], ["name", "asd-wqe001.mp4"], ["updated_at", "2015-06-08 07:59:18.282367"]]
+  [1m[35m (130.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 07:59:23.634178"], ["name", "asd-wqe002.mp4"], ["updated_at", "2015-06-08 07:59:23.634178"]]
+  [1m[36m (97.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 07:59:28.842036"], ["name", "asd-wqe003.mp4"], ["updated_at", "2015-06-08 07:59:28.842036"]]
+  [1m[35m (87.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 07:59:34.505434"], ["name", "asd-wqe004.mp4"], ["updated_at", "2015-06-08 07:59:34.505434"]]
+  [1m[36m (109.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 07:59:39.249571"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 07:59:39.249571"]]
+  [1m[35m (132.4ms)[0m  commit transaction
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 15:59:51 +0800
+Processing by VideoController#index as HTML
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x0000000410b810>):
+  app/controllers/video_controller.rb:10:in `index'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 16:08:43 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VideoController#index as HTML
+  [1m[35mVideo Load (0.2ms)[0m  SELECT  "videos".* FROM "videos"  LIMIT 10 OFFSET 0
+Completed 500 Internal Server Error in 49ms
+
+NoMethodError (undefined method `apply_finder_options' for #<Video::ActiveRecord_Relation:0x000000026cb680>):
+  app/controllers/video_controller.rb:10:in `index'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 16:11:45 +0800
+Processing by VideoController#index as HTML
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0[0m
+  Rendered video/index.html.erb within layouts/home (31.9ms)
+Completed 500 Internal Server Error in 53ms
+
+ActionView::Template::Error (The @video variable appears to be empty. Did you forget to pass the collection object for will_paginate?):
+    14:   <% end %>
+    15: </table>
+    16: 
+    17: <%= will_paginate @video %>
+  app/views/video/index.html.erb:17:in `_app_views_video_index_html_erb__3021604444851633664_37230360'
+
+
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/eli/.rvm/gems/ruby-1.9.3-p550/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 16:12:00 +0800
+Processing by VideoController#index as HTML
+  [1m[35mVideo Load (0.2ms)[0m  SELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0
+  Rendered video/index.html.erb within layouts/home (1.4ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 16:14:43 +0800
+Processing by VideoController#index as HTML
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0[0m
+  Rendered video/index.html.erb within layouts/home (2.3ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 16:14:46 +0800
+Processing by VideoController#index as HTML
+  [1m[35mVideo Load (0.2ms)[0m  SELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0
+  Rendered video/index.html.erb within layouts/home (1.5ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 16:15:46 +0800
+Processing by VideoController#index as HTML
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0[0m
+  Rendered video/index.html.erb within layouts/home (2.0ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 16:15:47 +0800
+Processing by VideoController#index as HTML
+  [1m[35mVideo Load (0.2ms)[0m  SELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0
+  Rendered video/index.html.erb within layouts/home (1.1ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 16:15:48 +0800
+Processing by VideoController#index as HTML
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0[0m
+  Rendered video/index.html.erb within layouts/home (1.1ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 16:16:03 +0800
+Processing by VideoController#index as HTML
+  [1m[35mVideo Load (0.3ms)[0m  SELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0
+  Rendered video/index.html.erb within layouts/home (1.6ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 16:16:04 +0800
+Processing by VideoController#index as HTML
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0[0m
+  Rendered video/index.html.erb within layouts/home (1.6ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 16:16:05 +0800
+Processing by VideoController#index as HTML
+  [1m[35mVideo Load (0.3ms)[0m  SELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0
+  Rendered video/index.html.erb within layouts/home (1.7ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 16:17:01 +0800
+Processing by VideoController#index as HTML
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0[0m
+  Rendered video/index.html.erb within layouts/home (2.0ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 16:17:02 +0800
+Processing by VideoController#index as HTML
+  [1m[35mVideo Load (0.3ms)[0m  SELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0
+  Rendered video/index.html.erb within layouts/home (1.7ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 08:17:33.514140"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 08:17:33.514140"]]
+  [1m[36m (103.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 08:17:34.186329"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 08:17:34.186329"]]
+  [1m[35m (93.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 08:17:34.706033"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 08:17:34.706033"]]
+  [1m[36m (73.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 08:17:35.186195"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 08:17:35.186195"]]
+  [1m[35m (77.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 08:17:35.650549"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 08:17:35.650549"]]
+  [1m[36m (72.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 08:17:36.074660"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 08:17:36.074660"]]
+  [1m[35m (73.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 08:17:36.514456"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 08:17:36.514456"]]
+  [1m[36m (84.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 08:17:36.922684"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 08:17:36.922684"]]
+  [1m[35m (137.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 08:17:37.297522"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 08:17:37.297522"]]
+  [1m[36m (72.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 08:17:37.706439"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 08:17:37.706439"]]
+  [1m[35m (71.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 08:17:38.089321"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 08:17:38.089321"]]
+  [1m[36m (73.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 08:17:38.522974"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 08:17:38.522974"]]
+  [1m[35m (81.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 08:17:38.906926"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 08:17:38.906926"]]
+  [1m[36m (107.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 08:17:39.298276"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 08:17:39.298276"]]
+  [1m[35m (77.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 08:17:39.698058"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 08:17:39.698058"]]
+  [1m[36m (77.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 08:17:40.074310"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 08:17:40.074310"]]
+  [1m[35m (77.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "videos" ("autonym", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["autonym", "asd-wqe wae_ass [unxi].123.mp4"], ["created_at", "2015-06-08 08:17:41.305961"], ["name", "asd-wqe005.mp4"], ["updated_at", "2015-06-08 08:17:41.305961"]]
+  [1m[36m (87.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-08 16:17:45 +0800
+Processing by VideoController#index as HTML
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "videos"
+  Rendered video/index.html.erb within layouts/home (83.9ms)
+Completed 200 OK in 86ms (Views: 85.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2015-06-08 16:17:47 +0800
+Processing by VideoController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 10[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "videos"
+  Rendered video/index.html.erb within layouts/home (3.5ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?page=3" for 127.0.0.1 at 2015-06-08 16:17:49 +0800
+Processing by VideoController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 20[0m
+  Rendered video/index.html.erb within layouts/home (2.1ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/?page=1" for 127.0.0.1 at 2015-06-08 16:17:50 +0800
+Processing by VideoController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mVideo Load (0.2ms)[0m  SELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  Rendered video/index.html.erb within layouts/home (4.0ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 192.168.206.11 at 2015-06-08 16:18:00 +0800
+Processing by VideoController#index as HTML
+  [1m[35mVideo Load (0.3ms)[0m  SELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  Rendered video/index.html.erb within layouts/home (4.2ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?page=2" for 192.168.206.11 at 2015-06-08 16:18:07 +0800
+Processing by VideoController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mVideo Load (0.3ms)[0m  SELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 10
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  Rendered video/index.html.erb within layouts/home (4.4ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?page=1" for 192.168.206.11 at 2015-06-08 16:18:09 +0800
+Processing by VideoController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mVideo Load (0.4ms)[0m  SELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  Rendered video/index.html.erb within layouts/home (5.4ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/?page=1" for 127.0.0.1 at 2015-06-08 16:45:42 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VideoController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mVideo Load (0.2ms)[0m  SELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "videos"[0m
+  Rendered video/index.html.erb within layouts/home (34.1ms)
+Completed 200 OK in 73ms (Views: 40.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/video/23" for 127.0.0.1 at 2015-06-08 16:45:46 +0800
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mVideo Load (0.2ms)[0m  SELECT  "videos".* FROM "videos"  WHERE "videos"."id" = 23 LIMIT 1
+  Rendered video/show.html.erb within layouts/home (0.4ms)
+Completed 200 OK in 21ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/?page=1" for 192.168.206.11 at 2015-06-08 16:46:03 +0800
+Processing by VideoController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT  "videos".* FROM "videos"   ORDER BY id DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "videos"
+  Rendered video/index.html.erb within layouts/home (3.0ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/video/23" for 192.168.206.11 at 2015-06-08 16:46:05 +0800
+Processing by VideoController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT  "videos".* FROM "videos"  WHERE "videos"."id" = 23 LIMIT 1[0m
+  Rendered video/show.html.erb within layouts/home (0.1ms)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.2ms)
