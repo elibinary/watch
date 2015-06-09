@@ -13,9 +13,24 @@
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-10">
-        <h1>Hello</h1>
+        <div class="row">
+          <div class="col-md-4">
+            <h1>Hello</h1>
+          </div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <div style="float: right;">
+              <% if logged_in? %>
+                <a href="/"><%= get_user_email %></a>
+                <a href="/user/signout">logout</a>
+              <% else %>
+                <a href="/user">login</a>
+              <% end %>
+            </div>
+          </div>
+        </div>
 
-         <div>
+        <div>
           <%= yield( :layout ) %>
         </div>
       </div>

@@ -3,6 +3,14 @@ Rails.application.routes.draw do
   match '/' => 'video#index', :as => :root, via: [:get, :post]
 
   resources :video
+  resources :user do
+    member do
+      # post 'signin'
+      get 'signout'
+    end
+  end
+
+  post '/user/signin' => 'user#signin'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
