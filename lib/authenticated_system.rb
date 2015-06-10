@@ -15,12 +15,11 @@ module AuthenticatedSystem
 
   # Filter method to enforce a login requirement.
   def login_required
-    puts "This is login_required"
     if logged_in?
       return true
     else
-      redirect_to :controller => '/user', :action => 'index'
-      return
+      redirect_to(:controller => '/user', :action => 'index')
+      return false
     end
   end
 

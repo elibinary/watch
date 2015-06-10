@@ -21,6 +21,8 @@ doc/app/*
 log/
 *.sqlite3
 
+public/video/*
+
 tmp/_activity*
 tmp/android_subjects
 tmp/redis_keys_*

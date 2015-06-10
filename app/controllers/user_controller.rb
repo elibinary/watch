@@ -8,12 +8,15 @@ class UserController < ApplicationController
   end
 
   def signin
-    puts "signin++++++++"
     if params[ :email ].present? && params[ :password ].present?
       user = User.authenticate(params[ :email ], params[ :password ])
-      create_session( user )
-      redirect_to :controller => '/video', :action => 'index'
-      return
+
+      if create_session( user )
+        redirect_to(:controller => '/video', :action => 'index') and return
+      else
+        render :action => 'index'
+        return
+      end
     end
   end
 
@@ -25,12 +28,7 @@ class UserController < ApplicationController
 protected
 
   def create_session(user, remember = false)
-    unless login( user )
-      render :action => 'index'
-      return
-    end
-    redirect_to :controller => '/video', :action => 'index'
-    return
+    login( user )
   end
 
 end

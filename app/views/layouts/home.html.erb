@@ -3,10 +3,17 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
-  <title></title>
+  <title>Watch</title>
 
   <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="/video-js/video-js.css" >
+  <script src="/video-js/video.js"></script>
+  <script>
+    videojs.options.flash.swf = "/video-js/video-js.swf"
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/home.css" >
 </head>
 <body>
   <div class="container">
@@ -19,9 +26,9 @@
           </div>
           <div class="col-md-4"></div>
           <div class="col-md-4">
-            <div style="float: right;">
+            <div class="pull-right">
               <% if logged_in? %>
-                <a href="/"><%= get_user_email %></a>
+                <a href="/" class="a-user-name"><%= get_user_name %></a>
                 <a href="/user/signout">logout</a>
               <% else %>
                 <a href="/user">login</a>

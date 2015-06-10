@@ -16,11 +16,10 @@ class User < ActiveRecord::Base
 
 
   def self.authenticate(email, psword)
-    puts "This is self.authenticate"
     return nil if email.blank? || psword.blank?
     u = find_by_email(email)
     return nil if u.blank?
-    u.authenticated?(psword)
+    u.authenticated?(psword) ? u : nil
   end
 
   def self.generate_password

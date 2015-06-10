@@ -4,13 +4,13 @@ Rails.application.routes.draw do
 
   resources :video
   resources :user do
-    member do
-      # post 'signin'
+    collection do
+      post 'signin'
       get 'signout'
     end
   end
 
-  post '/user/signin' => 'user#signin'
+  # post '/user/signin' => 'user#signin'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
