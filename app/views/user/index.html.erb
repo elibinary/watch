@@ -5,6 +5,9 @@
   </div>
   <div class="col-md-2"></div>
 </div> -->
+<% flash.each do |msg_type, message| %>
+  <p style="color: red;"><%= message%></p>
+<% end %>
 
 <%= form_tag( '/user/signin' ) do -%>
   <div class="form-group">

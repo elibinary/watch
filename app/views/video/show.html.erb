@@ -1,7 +1,28 @@
 <div>
   <video id="<%=@video.id %>" class="video-js vjs-default-skin vjs-big-play-centered"
   controls preload="auto" width="640" height="480">
-    <source src=<%= @src %> type="video/mp4">
+    <source src="<%= @src %>" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+</div>
+
+<div class="add-tag-div">
+  <!-- <form class="form-inline">  '/user/signin'-->
+  <%= form_tag( {:action => 'add_tag', :controller => 'video'}, {:class => 'form-inline'} ) do -%>
+    <div class="hidden">
+      <label for="exampleInputVideoId">Tags</label>
+      <input type="text" name="id" class="form-control" id="exampleInputVideoId" value=<%= @video.id %>>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputTags">Tags</label>
+      <input type="text" name="tags" class="form-control" id="exampleInputTags" placeholder="add tags, please split by ','">
+    </div>
+    <button type="submit" class="btn btn-default">Add</button>
+  <% end -%>
+</div>
+
+<div class="add-tag-div">
+  <% @tag_list.each do |tag| %>
+    <button type="button" class="btn btn-primary"><%= tag%></button>
+  <% end %>
 </div>

@@ -1,7 +1,7 @@
 class VideoController < ApplicationController
   layout 'home'
 
-  before_filter :video_required, :only => [ :show ]
+  before_filter :video_required, :only => [ :show, :add_tag ]
 
   def index
     conditions = {}
@@ -24,6 +24,28 @@ class VideoController < ApplicationController
     else
       @src << "default.mp4"
     end
+    @tag_list = @video.tag_list
+  end
+
+  def add_tag
+    if params[ :tags ] && params[ :tags ].present?
+      # step 1
+      tags_arr = params[ :tags ].split(',')
+      Tag.update_tags( tags_arr )
+      # step 2
+      tags_str = @video.tags || ""
+      tags_list = @video.tag_list
+
+      tags_arr.each do |tag|
+        tags_str << "," unless tags_str == ""
+        tags_str << tag unless tags_list.include?(tag)
+      end
+
+      @video.tags = tags_str
+      @video.save
+    end
+    # @tag_list = @video.tag_list
+    redirect_to :action => 'show', :id => @video 
   end
 
 protected

@@ -2,7 +2,12 @@ Rails.application.routes.draw do
 
   match '/' => 'video#index', :as => :root, via: [:get, :post]
 
-  resources :video
+  resources :video do
+    collection do
+      post :add_tag
+    end
+  end
+
   resources :user do
     collection do
       post 'signin'

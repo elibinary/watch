@@ -14,10 +14,13 @@ class UserController < ApplicationController
       if create_session( user )
         redirect_to(:controller => '/video', :action => 'index') and return
       else
+        flash[:notice] = "Unknown user name or bad password"
         render :action => 'index'
         return
       end
     end
+    flash[:notice] = "email and password is null..."
+    render :action => 'index'
   end
 
   def signout
