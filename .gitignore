@@ -1,0 +1,38 @@
+# Specify all .gitignore settings here, not in subdirectories
+# config/locales/xx.yml
+
+.ignore
+.rvmrc
+.ruby-gemset
+.ruby-version
+*.DS_Store
+*.tmp
+.project
+
+.bundle/
+.idea/
+.powrc
+.vagrant/
+
+db/assets.sql
+db/assets.sql.gz
+db/schema.rb
+doc/app/*
+log/
+*.sqlite3
+
+tmp/_activity*
+tmp/android_subjects
+tmp/redis_keys_*
+tmp/cache
+tmp/last_translation
+tmp/performance
+tmp/prodlogs
+tmp/prodnginxlogs
+tmp/pids/*.pid
+tmp/sockets/*.socket
+
+ 
+# Production access logs for parsing
+tmp/logs/**/*log*
+
