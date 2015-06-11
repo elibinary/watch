@@ -1,0 +1,29 @@
+<% flash.each do |msg_type, message| %>
+  <p style="color: red;"><%= message%></p>
+<% end %>
+
+<%= form_for( @video, :as => :video,
+             :url => { :controller => '/admin/video', :action => 'save', :id => @video },
+             :html => { :method => :post, :multipart => true } ) do |f| %>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <%= f.text_field :name, :class => "form-control" %>
+  <div class="form-group">
+    <label for="autonym">Autonym</label>
+    <%= f.text_field :autonym, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="filename">File</label>
+    <%= f.text_field :filename, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="category">Category</label>
+    <%= f.select :category, tag_items_arr, {}, {:class => "form-control"} %>
+  </div>
+  <div class="form-group">
+    <label for="tags">Tags</label>
+    <%= f.text_field :tags, :class => "form-control" %>
+  </div>
+  <button type="submit" class="btn btn-default">Save</button>
+  <a href="/admin/video" class="btn btn-primary pull-right">Back</a>
+<% end %>

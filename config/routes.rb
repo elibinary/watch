@@ -15,6 +15,15 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :admin do
+    resources :video do
+      collection do
+        post :save
+      end
+    end
+  end
+
+  match '/admin' => 'admin/video#index', :as => :admin, via: [:get, :post]
   # post '/user/signin' => 'user#signin'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

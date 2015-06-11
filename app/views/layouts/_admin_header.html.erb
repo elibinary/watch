@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <div class="pull-right">
+      <% if logged_in? %>
+        <a href="/" class="a-user-name"><%= get_user_name %></a>
+        <a href="/user/signout">logout</a>
+      <% else %>
+        <a href="/user">login</a>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-1"></div>
+</div>
