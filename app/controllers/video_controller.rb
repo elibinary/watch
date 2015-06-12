@@ -34,14 +34,16 @@ class VideoController < ApplicationController
       Tag.update_tags( tags_arr )
       # step 2
       tags_str = @video.tags || ""
-      tags_list = @video.tag_list
+      tags_str = tags_str.clone
 
+      tags_list = @video.tag_list
       tags_arr.each do |tag|
         tags_str << "," unless tags_str == ""
         tags_str << tag unless tags_list.include?(tag)
       end
 
       @video.tags = tags_str
+      
       @video.save
     end
     # @tag_list = @video.tag_list
@@ -51,8 +53,7 @@ class VideoController < ApplicationController
 protected
   
   def video_required
-    @video
-    @video ||= Video.find_by_id( params[ :id ] ) if params[ :id ].present?
+    @video = Video.find_by_id( params[ :id ] ) if params[ :id ].present?
     render_api_error( :message => 'Unknown video' ) unless @video
   end
 

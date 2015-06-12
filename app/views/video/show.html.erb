@@ -1,9 +1,20 @@
-<div>
-  <video id="<%=@video.id %>" class="video-js vjs-default-skin vjs-big-play-centered"
-  controls preload="auto" width="640" height="480">
-    <source src="<%= @src %>" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+<div class="row">
+  <div class="col-md-8 pull-left">
+    <video id="<%=@video.id %>" class="video-js vjs-default-skin vjs-big-play-centered"
+    controls preload="auto" width="620" height="460">
+      <source src="<%= @src %>" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="col-md-4 list-group pull-right">
+    <a href="#" class="list-group-item active">
+      Cras justo odio
+    </a>
+    <% video_list_by_tags.each do |video| %>
+      <a href="/video/<%= video.id%>" class="list-group-item" data-toggle="tooltip" data-placement="bottom" title="<%= video.tags%>"><%= video.name%></a>
+    <% end %>
+  </div>
 </div>
 
 <div class="add-tag-div">
@@ -23,6 +34,12 @@
 
 <div class="add-tag-div">
   <% @tag_list.each do |tag| %>
-    <button type="button" class="btn btn-primary"><%= tag%></button>
+    <a href=""><span class="label label-primary"><%= tag%></span></a>
   <% end %>
 </div>
+
+<script type="text/javascript">
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
