@@ -1,7 +1,9 @@
-<div class="row">
+<div class="row center-block" style="line-height: 3;">
   <div class="col-md-1"></div>
   <div class="col-md-10">
     <div class="pull-right">
+      <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+
       <% if logged_in? %>
         <a href="/" class="a-user-name"><%= get_user_name %></a>
         <a href="/user/signout">logout</a>

@@ -1,3 +1,11 @@
+<div class="page-header">
+  <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+  <b><%=@video.name %></b>
+  <br>
+  <br>
+  <a href="<%= @src %>" download="<%= @video.autonym %>">Download</a>
+</div>
+
 <div class="row">
   <div class="col-md-8 pull-left">
     <video id="<%=@video.id %>" class="video-js vjs-default-skin vjs-big-play-centered"

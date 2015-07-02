@@ -18,7 +18,7 @@
   </div>
   <div class="form-group">
     <label for="category">Category</label>
-    <%= f.select :category, tag_items_arr, {}, {:class => "form-control"} %>
+    <%= f.select :category, Video::CATEGORY_ITEMS, {}, {:class => "form-control"} %>
   </div>
   <div class="form-group">
     <label for="tags">Tags</label>
