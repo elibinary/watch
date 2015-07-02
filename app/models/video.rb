@@ -8,6 +8,7 @@ class Video < ActiveRecord::Base
     Movie
     Animation
     Learn
+    3DH
   }
 
   def tag_list
