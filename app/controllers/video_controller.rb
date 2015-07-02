@@ -5,6 +5,7 @@ class VideoController < ApplicationController
 
   def index
     conditions = {}
+    conditions[:category] = params[:category] if params[:category].present?
     # conditions[:id] = params[:app_default][:id] if params[:app_default].present? && params[:app_default][:id].present?
     conditions[:category] = params[:category] if params[:category].present?
     # conditions[:category] = params[:video][:category] if params[:video].present? && params[:video][:category].present?
