@@ -19,6 +19,12 @@ class Admin::VideoController < AdminController
   def create
     @video = Video.new(video_params)
 
+    if params[:video][:file].present?
+      file = params[:video][:file]
+      filename = UploadService.new.uploadfile(file)
+      @video.play_url = filename
+    end
+
     update_tags
 
     if @video.save

@@ -1,0 +1,24 @@
+defaults: &defaults
+  app_name: Watch
+  apn:
+    uri: "http://apn.ejianfei.com/api/v1/notifications/send_notification_for_mac"
+  qiniu:
+    house_host: "http://bohe-qa.u.qiniudn.com"
+
+development:
+  <<: *defaults
+  ifood_host: "http://ifood.bh.com/"
+  record_host: "http://record.bh.com/"
+
+test:
+  <<: *defaults
+  ifood_host: "http://ifood.bh.com/"
+  record_host: "http://record.bh.com/"
+
+qa:
+  <<: *defaults
+  ifood_host: "http://ifood.ejianfei.com/"
+  record_host: "http://record.ejianfei.com/"
+
+production:
+  <<: *defaults

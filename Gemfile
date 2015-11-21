@@ -1,5 +1,5 @@
 # source 'https://rubygems.org'
-source 'http://ruby.taobao.org/'
+source 'https://ruby.taobao.org/'
 
 gem 'will_paginate', '>=3.0.4'
 
@@ -42,3 +42,4 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem "settingslogic"

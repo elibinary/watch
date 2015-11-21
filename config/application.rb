@@ -20,6 +20,9 @@ module Watch
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    #  -- all .rb files in that directory are automatically loaded.
+    config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**}')]
+
     Dir["#{Rails.root}/lib/**/"].each { |dir| config.autoload_paths += [ dir ] }
   end
 end

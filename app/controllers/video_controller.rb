@@ -19,16 +19,7 @@ class VideoController < ApplicationController
   end
 
   def show
-    @src = "/video/"
-    if @video.autonym.present?
-      unless @video.filename.blank?
-        @src << @video.filename
-        @src << "/"
-      end
-      @src << @video.autonym
-    else
-      @src << "default.mp4"
-    end
+    @src = @video.src_url
     @tag_list = @video.tag_list
   end
 

@@ -24,6 +24,11 @@
     <label for="tags">Tags</label>
     <%= f.text_field :tags, :class => "form-control" %>
   </div>
+  <hr />
+  <div class="form-group">
+    <label for="filename">File</label>
+    <%= f.file_field :file, :class => "form-control" %>
+  </div>
   <button type="submit" class="btn btn-default">Create</button>
   <a href="/admin/video" class="btn btn-primary pull-right">Back</a>
 <% end %>
