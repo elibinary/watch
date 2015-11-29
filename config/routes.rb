@@ -21,6 +21,8 @@ Rails.application.routes.draw do
         post :save
       end
     end
+
+    resources :monitors
   end
 
   match '/admin' => 'admin/video#index', :as => :admin, via: [:get, :post]

@@ -1,0 +1,17 @@
+<%= form_for(@admin_monitor) do |f| %>
+  <% if @admin_monitor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_monitor.errors.count, "error") %> prohibited this admin_monitor from being saved:</h2>
+
+      <ul>
+      <% @admin_monitor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
