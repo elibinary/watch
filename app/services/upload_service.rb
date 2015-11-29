@@ -8,7 +8,7 @@ class UploadService
       FileUtils.mkdir("#{Rails.root}/public/upload/video") unless File.exist?("#{Rails.root}/public/upload/video")
       #写入文件      
       ##wb 表示通过二进制方式写，可以保证文件不损坏
-      File.open("#{Rails.root}/public/upload/video/#{@filename}", "wb") do |f|
+      File.open("#{Rails.root}/public/upload/video/#{@filename}.mp4", "wb") do |f|
         f.write(file.read)
       end
       return @filename
