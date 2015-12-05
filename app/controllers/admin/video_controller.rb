@@ -22,7 +22,7 @@ class Admin::VideoController < AdminController
     if params[:video][:file].present?
       file = params[:video][:file]
       filename = UploadService.new.uploadfile(file)
-      @video.play_url = filename
+      @video.play_url = filename+".mp4"
     end
 
     update_tags
